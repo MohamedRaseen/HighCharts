@@ -10,6 +10,6 @@ export const callApi = async (url = '', method, body) => {
         requestInfo = { ...requestInfo, body: JSON.stringify(body) }
     }
 
-    const response = await fetch(url, requestInfo);
-    return response.json();
+    const response = await fetch(url, requestInfo).then((data) => data.json());
+    return response;
 }
