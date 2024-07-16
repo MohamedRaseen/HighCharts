@@ -44,6 +44,18 @@ export const useChartOption = (defaultChartData) => {
               ],
               xAxis: {
                 categories: products?.map(product => product.title)
+              },
+              plotOptions: {
+                bar: {
+                  dataLabels:{
+                    enabled: true
+                  }
+                },
+                pie: {
+                  dataLabels:{
+                    enabled: true
+                  }
+                }
               }
             };
       
